@@ -1,0 +1,18 @@
+{
+  "name": "pure",
+  "description": "SwordAir blog personal theme",
+  "keywords": ["ghost-theme", "pure theme", "SwordAir", "Sword Wang"],
+  "version": "0.1.0",
+  "engines": {
+    "ghost-api": "v3"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Sword Wang",
+    "email": "iifksp@swordair.com"
+  },
+  "config": {
+    "posts_per_page": 8,
+    "image_sizes": {}
+  }
+}

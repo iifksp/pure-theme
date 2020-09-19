@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{> header}}
+
+<main class="content" role="main">
+
+  {{#foreach posts}}
+
+    <article class="{{post_class}}">
+      <header class="post-header">
+        <div class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+            <span class="post-tags"><svg width="20" height="20" viewBox="0 0 25 25"><path fill="#aaa" d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd"></path></svg>{{tags}}</span>
+            <span class="post-comments"><svg width="20" height="20" viewBox="0 0 33 33" fill="#aaa" class="q" aria-label="responses"><path clip-rule="evenodd" d="M24.28 25.5l.32-.29c2.11-1.94 3.4-4.61 3.4-7.56C28 11.83 22.92 7 16.5 7S5 11.83 5 17.65s5.08 10.66 11.5 10.66c1.22 0 2.4-.18 3.5-.5l.5-.15.41.33a8.86 8.86 0 0 0 4.68 2.1 7.34 7.34 0 0 1-1.3-4.15v-.43zm1 .45c0 1.5.46 2.62 1.69 4.44.22.32.01.75-.38.75a9.69 9.69 0 0 1-6.31-2.37c-1.2.35-2.46.54-3.78.54C9.6 29.3 4 24.09 4 17.65 4 11.22 9.6 6 16.5 6S29 11.22 29 17.65c0 3.25-1.42 6.18-3.72 8.3z"></path></svg><a href="{{url}}#disqus_thread">Comments</a></span>
+        </div>
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+      </header>
+      <section class="post-excerpt">
+        {{#if feature_image}}
+          <a rel="nofollow" href="{{url}}"><img class="feature-image" src="{{feature_image}}" alt="{{{title}}}" /></a>
+        {{/if}}
+        {{excerpt words="20"}} ...
+        <div class="more-box">
+          <a class="read-more" rel="nofollow" href="{{url}}">Read more ...</a>
+        </div>
+      </section>
+    </article>
+  {{/foreach}}
+
+  {{pagination}}
+
+</main>
