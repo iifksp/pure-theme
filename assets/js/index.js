@@ -10,8 +10,8 @@ hljs.initHighlightingOnLoad();
   "use strict";
 
   $(document).ready(function () {
-    $("#nav-drawer").click(function () {
-      $("#wrapper").toggleClass("drawer-open");
+    $("#nav-more").click(function () {
+      $("body").toggleClass("drawer-open");
     });
 
     /* archive index */
@@ -69,7 +69,7 @@ hljs.initHighlightingOnLoad();
   });
 })(jQuery);
 
-(function ($) {
+(function () {
   var images = document.querySelectorAll(".kg-gallery-image img");
   images.forEach(function (image) {
     var container = image.closest(".kg-gallery-image");
@@ -78,4 +78,4 @@ hljs.initHighlightingOnLoad();
     var ratio = width / height;
     container.style.flex = ratio + " 1 0%";
   });
-})(jQuery);
+})();
